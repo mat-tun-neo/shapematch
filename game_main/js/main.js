@@ -45,6 +45,8 @@ const ASSETS = {
     "hiyoko_shape":    "./images/hiyoko_shape.png" + datestr,
     "flag":            "./images/flag.png" + datestr,
     "flag_shape":      "./images/flag_shape.png" + datestr,
+    "vegetable":       "./images/vegetable.png" + datestr,
+    "vegetable_shape": "./images/vegetable_shape.png" + datestr,
     "start_button":    "./images/startbutton.png" + datestr,
     "goal_button":     "./images/goalbutton.png" + datestr,
     "x_button":        "./images/xbutton.png" + datestr
@@ -75,7 +77,9 @@ const ASSETS = {
     "hiyoko"         : {},
     "hiyoko_shape"   : {},
     "flag"           : {},
-    "flag_shape"     : {}
+    "flag_shape"     : {},
+    "vegetable"      : {},
+    "vegetable_shape": {}
   }
 };
 let hiyoko = {
@@ -135,6 +139,29 @@ let flag = {
 }
 ASSETS.spritesheet["flag"         ] = flag;
 ASSETS.spritesheet["flag_shape"   ] = flag;
+
+let vegetable = {
+  "frame": { "width": 600, "height": 600, "cols": 4, "rows": 4 },
+  "animations" : {
+    "000" : {"frames": [ 0],  "next": "000", "frequency": 1 },
+    "001" : {"frames": [ 1],  "next": "001", "frequency": 1 },
+    "002" : {"frames": [ 2],  "next": "002", "frequency": 1 },
+    "003" : {"frames": [ 3],  "next": "003", "frequency": 1 },
+    "004" : {"frames": [ 4],  "next": "004", "frequency": 1 },
+    "005" : {"frames": [ 5],  "next": "005", "frequency": 1 },
+    "006" : {"frames": [ 6],  "next": "006", "frequency": 1 },
+    "007" : {"frames": [ 7],  "next": "007", "frequency": 1 },
+    "008" : {"frames": [ 8],  "next": "008", "frequency": 1 },
+    "009" : {"frames": [ 9],  "next": "009", "frequency": 1 },
+    "010" : {"frames": [10],  "next": "010", "frequency": 1 },
+    "011" : {"frames": [11],  "next": "011", "frequency": 1 },
+    "012" : {"frames": [12],  "next": "012", "frequency": 1 },
+    "013" : {"frames": [13],  "next": "013", "frequency": 1 },
+    "014" : {"frames": [14],  "next": "014", "frequency": 1 }
+  }
+}
+ASSETS.spritesheet["vegetable"         ] = vegetable;
+ASSETS.spritesheet["vegetable_shape"   ] = vegetable;
 
 // 0パディング（NUM=値 LEN=桁数）
 function zeroPadding(NUM, LEN) {
