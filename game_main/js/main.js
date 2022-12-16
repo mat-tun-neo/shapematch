@@ -18,6 +18,12 @@ const CHARACTER_TOTALNUM     = document.getElementById("charnum").innerText;
 const RELOCATION_TIMES       = 200000;
 const MATCH_PIXEL            = 20;
 
+// 線の両端
+const UP_LINE = Vector2.normal(Vector2(0, 0), Vector2(SCREEN_WIDTH, 0)).normalize();
+const LEFT_LINE = Vector2.normal(Vector2(0, 0), Vector2(0, SCREEN_HEIGHT)).normalize();
+const RIGHT_LINE = Vector2.normal(Vector2(SCREEN_WIDTH, 0), Vector2(SCREEN_WIDTH, SCREEN_HEIGHT)).normalize();
+const DOWN_LINE = Vector2.normal(Vector2(0, SCREEN_HEIGHT), Vector2(SCREEN_WIDTH, SCREEN_HEIGHT)).normalize();
+
 // メイン画面
 var GameMain;
 
