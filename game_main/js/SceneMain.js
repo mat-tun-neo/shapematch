@@ -37,6 +37,7 @@ phina.define("SceneMain", {
         // 移動停止
         child.sprite.flickable.vertical = false;
         child.sprite.flickable.horizontal = false;
+        releaseSemaphore();
         // 正解数インクリメント
         this.correct_cnt++;
         console.log("this.correct_cnt", this.correct_cnt);
@@ -176,7 +177,7 @@ phina.define("SceneMain", {
           // （離す際、ポインタ・指はオブジェクト上に無くても良い）
           sprite.onpointend = () => {
             console.log("obj.index onpointend", obj.index);
-            releaseSemaphore(obj);
+            releaseSemaphore();
           };
 
           // マウスポインタもしくは指がオブジェクトに乗っかった瞬間

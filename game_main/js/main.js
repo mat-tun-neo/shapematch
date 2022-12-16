@@ -207,7 +207,7 @@ function getSemaphore(obj) {
   }
   //console.log("getSemaphore", listSemaphore);
 }
-function releaseSemaphore(obj) {
+function releaseSemaphore() {
   for (let i = 0; i < listSemaphore.length; i++) listSemaphore[i] = 0;
   //console.log("releaseSemaphore", listSemaphore);
 }
